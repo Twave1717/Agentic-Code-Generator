@@ -116,7 +116,7 @@ if __name__ == "__main__":
         code="",
         reulst="",
     )
-    for event in flow.stream(initial_state, stream_mode="values"):
+    for event in flow.stream(initial_state):
         for node_name, value in event.items():
             print(f"\n==============\nSTEP: {node_name}\n==============\n")
             print(value)
